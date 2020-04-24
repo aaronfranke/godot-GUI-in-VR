@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://player/player.gd" type="Script" id=1]
+[ext_resource path="res://player/controller.tscn" type="PackedScene" id=2]
+
+
+[node name="Player" type="ARVROrigin"]
+script = ExtResource( 1 )
+
+[node name="XRCamera" type="ARVRCamera" parent="."]
+far = 1000.0
+
+[node name="LeftController" parent="." instance=ExtResource( 2 )]
+
+[node name="RightController" parent="." instance=ExtResource( 2 )]
+controller_id = 2
