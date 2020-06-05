@@ -1,0 +1,75 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://icon.png" type="Texture" id=1]
+
+[node name="GUI" type="Control"]
+margin_right = 280.0
+margin_bottom = 180.0
+mouse_filter = 1
+
+[node name="Panel" type="Panel" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="Label" type="Label" parent="Panel"]
+margin_left = 44.0
+margin_top = 27.0
+margin_right = 121.0
+margin_bottom = 41.0
+text = "Hello world!"
+
+[node name="Button" type="Button" parent="Panel"]
+margin_left = 14.0
+margin_top = 46.0
+margin_right = 154.0
+margin_bottom = 74.0
+text = "A button!"
+
+[node name="TextEdit" type="LineEdit" parent="Panel"]
+margin_left = 14.0
+margin_top = 87.0
+margin_right = 154.0
+margin_bottom = 111.0
+caret_blink = true
+caret_blink_speed = 0.5
+
+[node name="HSlider" type="HSlider" parent="Panel"]
+margin_left = 14.0
+margin_top = 118.0
+margin_right = 154.0
+margin_bottom = 143.0
+ticks_on_borders = true
+
+[node name="ColorRect" type="ColorRect" parent="Panel"]
+margin_left = 180.0
+margin_top = 26.0
+margin_right = 244.0
+margin_bottom = 90.0
+color = Color( 1, 0, 0, 1 )
+
+[node name="TextureRect" type="TextureRect" parent="Panel"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = 52.0
+margin_top = -52.0
+margin_right = 92.0
+margin_bottom = -12.0
+texture = ExtResource( 1 )
+expand = true
+
+[node name="VSlider" type="VSlider" parent="Panel"]
+margin_left = 260.0
+margin_top = 26.0
+margin_right = 276.0
+margin_bottom = 166.0
+
+[node name="OptionButton" type="OptionButton" parent="Panel"]
+margin_left = 170.0
+margin_top = 111.0
+margin_right = 252.0
+margin_bottom = 165.0
+text = "Item 0"
+items = [ "Item 0", null, false, 0, null, "Item 1", null, false, 1, null, "Item 2", null, false, 2, null ]
+selected = 0
