@@ -1,8 +1,7 @@
 [gd_scene load_steps=3 format=2]
 
-[ext_resource path="res://player/player.gd" type="Script" id=1]
-[ext_resource path="res://player/controller.tscn" type="PackedScene" id=2]
-
+[ext_resource path="res://addons/gui_in_vr/player/player.gd" type="Script" id=1]
+[ext_resource path="res://addons/gui_in_vr/player/controller.tscn" type="PackedScene" id=2]
 
 [node name="Player" type="ARVROrigin"]
 script = ExtResource( 1 )

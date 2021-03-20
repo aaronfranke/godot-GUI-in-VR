@@ -1,0 +1,8 @@
+[gd_resource type="SpatialMaterial" load_steps=3 format=2]
+
+[ext_resource path="res://addons/gui_in_vr/vive/vive_albedo.png" type="Texture" id=1]
+[ext_resource path="res://addons/gui_in_vr/vive/vive_spec.png" type="Texture" id=2]
+
+[resource]
+albedo_texture = ExtResource( 1 )
+metallic_texture = ExtResource( 2 )

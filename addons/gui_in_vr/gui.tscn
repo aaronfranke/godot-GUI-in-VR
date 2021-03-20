@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=2]
 
-[ext_resource path="res://icon.png" type="Texture" id=1]
+[ext_resource path="res://addons/gui_in_vr/icon.png" type="Texture" id=1]
 
 [node name="GUI" type="Control"]
 margin_right = 280.0

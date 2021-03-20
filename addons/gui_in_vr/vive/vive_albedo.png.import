@@ -2,8 +2,8 @@
 
 importer="texture"
 type="StreamTexture"
-path.s3tc="res://.import/vive_albedo.png-ca2ad7266c18c3df0f2d997fc5bb3e16.s3tc.stex"
-path.etc2="res://.import/vive_albedo.png-ca2ad7266c18c3df0f2d997fc5bb3e16.etc2.stex"
+path.s3tc="res://.import/vive_albedo.png-b09f8bac79c2230c15f2b63a5c5b4ea6.s3tc.stex"
+path.etc2="res://.import/vive_albedo.png-b09f8bac79c2230c15f2b63a5c5b4ea6.etc2.stex"
 metadata={
 "imported_formats": [ "s3tc", "etc2" ],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://vive/vive_albedo.png"
-dest_files=[ "res://.import/vive_albedo.png-ca2ad7266c18c3df0f2d997fc5bb3e16.s3tc.stex", "res://.import/vive_albedo.png-ca2ad7266c18c3df0f2d997fc5bb3e16.etc2.stex" ]
+source_file="res://addons/gui_in_vr/vive/vive_albedo.png"
+dest_files=[ "res://.import/vive_albedo.png-b09f8bac79c2230c15f2b63a5c5b4ea6.s3tc.stex", "res://.import/vive_albedo.png-b09f8bac79c2230c15f2b63a5c5b4ea6.etc2.stex" ]
 
 [params]
 

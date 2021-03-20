@@ -9,7 +9,7 @@ var _ws := 1.0
 
 onready var _parent = get_parent()
 onready var ovr_render_model = preload("res://addons/godot-openvr/OpenVRRenderModel.gdns").new()
-onready var vive_material = preload("res://vive/vive.tres")
+onready var vive_material = preload("res://addons/gui_in_vr/vive/vive.tres")
 onready var touchpad_cylinder = $Touchpad/Cylinder
 onready var touchpad_selection_dot = $Touchpad/SelectionDot
 
@@ -19,7 +19,7 @@ func _ready():
 
 func _process(_delta):
 	_base_controller_mesh_stuff()
-	
+
 	# Show a hint where the user's finger is on the touchpad.
 	var touchpad_input = Vector2(_parent.get_joystick_axis(0), _parent.get_joystick_axis(1))
 	if touchpad_input == Vector2.ZERO:
@@ -32,23 +32,23 @@ func _base_controller_mesh_stuff():
 	if !_parent.get_is_active():
 		_parent.visible = false
 		return
-	
+
 	_scale_controller_mesh()
-	
+
 	# Was active before, we don't need to do anything.
 	if _parent.visible:
 		return
-	
+
 	# Became active, handle it.
 	var controller_name = _parent.get_controller_name()
 	print("Controller " + controller_name + " became active")
-	
+
 	# Attempt to load a mesh for this controller.
 	mesh = load_controller_mesh(controller_name)
 	touchpad_cylinder.visible = controller_name.find("vive") < 0
 	if !touchpad_cylinder.visible:
 		material_override = vive_material
-	
+
 	# Make it visible.
 	_parent.visible = true
 	emit_signal("controller_activated", _parent)
@@ -59,7 +59,7 @@ func load_controller_mesh(controller_name):
 		return ovr_render_model
 	if ovr_render_model.load_model("generic_controller"):
 		return ovr_render_model
-	
+
 	printerr("Unable to load a controller mesh.")
 	return Mesh.new()
 

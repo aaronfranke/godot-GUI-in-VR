@@ -16,8 +16,8 @@ _global_script_class_icons={
 [application]
 
 config/name="GUI in VR"
-run/main_scene="res://world.tscn"
-config/icon="res://icon.png"
+run/main_scene="res://addons/gui_in_vr/world.tscn"
+config/icon="res://addons/gui_in_vr/icon.png"
 
 [display]
 
