@@ -6,10 +6,13 @@ const XRServer = ARVRServer
 var _is_activating_gui := false
 var _old_raycast_collider: PhysicsBody = null
 var _old_viewport_point: Vector2
+var _ws := 1.0
 
 onready var _controller = get_parent()
 
+
 func _process(_delta):
+	_scale_ray()
 	var raycast_collider = get_collider()
 	# First of all, check if we need to release a previous mouse click.
 	if _old_raycast_collider and raycast_collider != _old_raycast_collider:
@@ -75,3 +78,10 @@ func _release_mouse():
 
 func _is_trigger_pressed():
 	return _controller.get_joystick_axis(JOY_VR_ANALOG_TRIGGER) > 0.6
+
+
+func _scale_ray():
+	var new_ws = XRServer.world_scale
+	if _ws != new_ws:
+		_ws = new_ws
+		scale = Vector3.ONE * _ws

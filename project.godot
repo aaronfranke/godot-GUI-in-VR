@@ -8,11 +8,6 @@
 
 config_version=4
 
-_global_script_classes=[  ]
-_global_script_class_icons={
-
-}
-
 [application]
 
 config/name="GUI in VR"
@@ -30,6 +25,7 @@ singletons=[ "res://addons/godot-openvr/godot_openvr.gdnlib" ]
 [physics]
 
 common/physics_fps=180
+3d/physics_engine="GodotPhysics"
 
 [rendering]
 
